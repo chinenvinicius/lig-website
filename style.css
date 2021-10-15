@@ -5,7 +5,7 @@
 :root {
   --logo-color:linear-gradient(90deg, rgb(40, 37, 226), rgb(55, 0, 255));
   --header-footer-bg:linear-gradient(90deg,
-  rgb(255, 6, 6),
+  rgb(223, 222, 222),
   rgb(214, 213, 213));
   --menu-color:rgb(0, 0, 0);
   --page-body-color:rgb(207, 207, 207);
@@ -288,7 +288,7 @@ footer .copy-right h3 a {
 }
 .page-wrapper .page-main .js-scroll.scroll-ativo {
   opacity: 1;
-  transition: 0.5s;
+  transition: 0.3s;
   transform: translate3d(0, 0, 0);
 }
 .page-wrapper .page-main #home-main {
@@ -477,6 +477,12 @@ footer .copy-right h3 a {
   -webkit-box-shadow: -3px 0px 18px 0px rgba(0, 0, 0, 0.39);
   -ms-box-shadow: -3px 0px 18px 0px rgba(0, 0, 0, 0.39);
   box-shadow: -3px 0px 18px 0px rgba(0, 0, 0, 0.39);
+}
+@media screen and (max-width: 475px) {
+  .page-wrapper .page-main #home-about .about-container .wrapper .card {
+    width: 220px;
+    margin: 0 auto;
+  }
 }
 .page-wrapper .page-main #home-about .about-container .wrapper .card h1 {
   margin: 1rem 0 2rem 0;
