@@ -12,19 +12,20 @@ rgb(214, 213, 213));
 
 --body-max-width:1500px;
 
---section-main:rgb(4, 11, 46);
+--section-main:linear-gradient(45deg, rgb(16, 18, 102), rgb(0, 2, 136));
 --text-clr:white;
 
 --gradient-text:linear-gradient(45deg, rgb(245, 63, 63), rgb(224, 104, 104));
 --gradient-text1:linear-gradient(45deg, rgb(38, 0, 255), rgb(180, 104, 224));
 --gradient-text2:linear-gradient(45deg, rgb(119, 212, 255), rgb(255, 255, 255));
---title-text-clr:rgb(71, 71, 231);
+--title-text-clr:rgb(43, 27, 189);
  
  --header-font-size-small:calc(15px + 3 * ((100vw - 320px) / 680));
 
  --header-font-size-midium:calc(30px + 4 * ((100vw - 320px) / 680));
 
- --header-font-size-big:calc(45px + 6 * ((100vw - 320px) / 680));;
+ --header-font-size-big:calc(45px + 6 * ((100vw - 320px) / 680));
+ --header-font-size-big1:calc(45px + 10 * ((100vw - 320px) / 680));;
 }
 html{
     width: 100%;
@@ -299,7 +300,7 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-bottom: 30px 20px;
+        padding:2rem 0 5rem 0;
         h3{
             a{
                 color: var(--menu-color);

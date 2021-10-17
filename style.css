@@ -10,15 +10,16 @@
   --menu-color:rgb(0, 0, 0);
   --page-body-color:rgb(207, 207, 207);
   --body-max-width:1500px;
-  --section-main:rgb(4, 11, 46);
+  --section-main:linear-gradient(45deg, rgb(16, 18, 102), rgb(0, 2, 136));
   --text-clr:white;
   --gradient-text:linear-gradient(45deg, rgb(245, 63, 63), rgb(224, 104, 104));
   --gradient-text1:linear-gradient(45deg, rgb(38, 0, 255), rgb(180, 104, 224));
   --gradient-text2:linear-gradient(45deg, rgb(119, 212, 255), rgb(255, 255, 255));
-  --title-text-clr:rgb(71, 71, 231);
+  --title-text-clr:rgb(43, 27, 189);
   --header-font-size-small:calc(15px + 3 * ((100vw - 320px) / 680));
   --header-font-size-midium:calc(30px + 4 * ((100vw - 320px) / 680));
   --header-font-size-big:calc(45px + 6 * ((100vw - 320px) / 680));
+  --header-font-size-big1:calc(45px + 10 * ((100vw - 320px) / 680));
 }
 
 html {
@@ -265,7 +266,7 @@ footer .copy-right {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30px 20px;
+  padding: 2rem 0 5rem 0;
 }
 footer .copy-right h3 a {
   color: var(--menu-color);
@@ -293,7 +294,7 @@ footer .copy-right h3 a {
 }
 .page-wrapper .page-main #home-main {
   height: auto;
-  background-color: var(--section-main);
+  background: var(--section-main);
 }
 .page-wrapper .page-main #home-main .main-container {
   display: grid;
@@ -321,7 +322,7 @@ footer .copy-right h3 a {
   }
 }
 .page-wrapper .page-main #home-main .main-container .blockwrapper .block {
-  background: linear-gradient(45deg, #2e2ecf, #a200ff);
+  background: white;
   height: 400px;
   max-width: 600px;
   margin-right: 10px;
@@ -333,11 +334,16 @@ footer .copy-right h3 a {
   padding: 4rem 5rem;
 }
 .page-wrapper .page-main #home-main .main-container .blockwrapper .block .fas {
-  color: white;
+  color: #000c75;
   font-size: 10rem;
 }
+@media screen and (max-width: 600px) {
+  .page-wrapper .page-main #home-main .main-container .blockwrapper .block {
+    display: none;
+  }
+}
 .page-wrapper .page-main #home-main .main-container .blockwrapper .users {
-  background: linear-gradient(45deg, #8292d6, #3e3594);
+  background: white;
   max-width: 600px;
   margin-right: 10px;
   border-radius: 10px;
@@ -348,7 +354,7 @@ footer .copy-right h3 a {
   padding: 4rem 5rem;
 }
 .page-wrapper .page-main #home-main .main-container .blockwrapper .users h1 {
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 2rem;
   font-family: "Bebas Neue", cursive;
@@ -429,7 +435,7 @@ footer .copy-right h3 a {
 .page-wrapper .page-main #home-about {
   background: white;
   height: auto;
-  padding: 2rem 0 10rem 0;
+  padding: 5rem 0 10rem 0;
 }
 .page-wrapper .page-main #home-about .about-container {
   height: fit-content;
@@ -530,6 +536,7 @@ footer .copy-right h3 a {
   height: auto;
   background: var(--section-main);
   display: grid;
+  padding: 2.5rem 0 5rem 0;
 }
 .page-wrapper .page-main #home-service .wrapper .service-title {
   display: flex;
@@ -552,20 +559,14 @@ footer .copy-right h3 a {
   grid-gap: 20px;
   padding: 5rem 2rem;
 }
-@media screen and (max-width: 800px) {
-  .page-wrapper .page-main #home-service .wrapper .container {
-    grid-template-columns: auto;
-    padding: 6rem 1rem;
-  }
-}
 .page-wrapper .page-main #home-service .wrapper .container article {
-  background: white;
   border-radius: 10px;
 }
 .page-wrapper .page-main #home-service .wrapper .container article .thumbnail img {
-  height: 200px;
+  height: 300px;
   width: 100%;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
+  background-size: 100%;
 }
 .page-wrapper .page-main #home-service .wrapper .container article .title {
   display: flex;
@@ -574,7 +575,7 @@ footer .copy-right h3 a {
   padding: 10px;
   font-family: "Bebas Neue", cursive;
   font-family: "Poppins", sans-serif;
-  color: var(--title-text-clr);
+  color: #2fe7ff;
   font-size: var(--header-font-size-small);
 }
 .page-wrapper .page-main #home-service .wrapper .container article p {
@@ -583,14 +584,15 @@ footer .copy-right h3 a {
   align-items: center;
   padding: 10px;
   font-size: 18px;
+  color: white;
 }
 .page-wrapper .page-main #home-contact {
   background-color: white;
-  padding: 6rem 4rem;
+  padding: 6rem 4rem 10rem 4rem;
 }
 @media screen and (max-width: 800px) {
   .page-wrapper .page-main #home-contact {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 10rem 2rem;
   }
 }
 @media screen and (max-width: 475px) {
@@ -635,6 +637,15 @@ footer .copy-right h3 a {
 }
 .page-wrapper .page-main #home-contact .contact-wrapper .form-wrapper form .group-form input {
   margin-bottom: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #dadada;
+  height: 30px;
+}
+.page-wrapper .page-main #home-contact .contact-wrapper .form-wrapper form .group-form textarea {
+  background-color: #dadada;
+  border: none;
+  border-radius: 5px;
 }
 .page-wrapper .page-main #home-contact .contact-wrapper .form-wrapper form button {
   font-size: 1rem;
@@ -704,7 +715,7 @@ footer .copy-right h3 a {
   width: 100%;
   position: absolute;
   top: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.062), rgba(141, 141, 141, 0.459), #757575);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.062), rgba(129, 128, 128, 0.548), #525252);
 }
 .blog-page .page-main .blog-top-part .img-wrapper {
   pointer-events: none;
@@ -720,7 +731,7 @@ footer .copy-right h3 a {
 .blog-page .page-main .blog-top-part .top-content {
   position: relative;
   z-index: 150;
-  padding: 10rem 4rem;
+  padding: 15rem 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -730,8 +741,8 @@ footer .copy-right h3 a {
   }
 }
 .blog-page .page-main .blog-top-part .top-content h1 {
-  font-size: var(--header-font-size-big);
-  background-image: linear-gradient(45deg, #4d4dd8, #0066ff);
+  font-size: var(--header-font-size-big1);
+  background-image: linear-gradient(45deg, #2d0096, #3100b9);
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
